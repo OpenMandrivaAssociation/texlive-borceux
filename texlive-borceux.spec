@@ -1,3 +1,9 @@
+# revision 21047
+# category Package
+# catalog-ctan /macros/generic/diagrams/borceux
+# catalog-date 2009-01-02 20:30:08 +0100
+# catalog-license noinfo
+# catalog-version 3.1
 Name:		texlive-borceux
 Version:	3.1
 Release:	1
@@ -54,6 +60,7 @@ south-east, etc.); 12 types and 32 directions are available.
 %doc %{_texmfdistdir}/doc/generic/borceux/compatibility/OldMicroDiagram
 %doc %{_texmfdistdir}/doc/generic/borceux/compatibility/OldMiniDiagram
 %doc %{_texmfdistdir}/doc/generic/borceux/compatibility/OldMultipleArrows
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -64,3 +71,5 @@ south-east, etc.); 12 types and 32 directions are available.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
