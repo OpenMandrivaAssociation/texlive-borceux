@@ -17,8 +17,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 The macros support the construction of diagrams, such as those
@@ -30,20 +28,12 @@ to do about the arrows is to specify their type (monomorphism,
 pair of adjoint arrows, etc.) and their direction (north,
 south-east, etc.); 12 types and 32 directions are available.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -61,7 +51,6 @@ south-east, etc.); 12 types and 32 directions are available.
 %doc %{_texmfdistdir}/doc/generic/borceux/compatibility/OldMicroDiagram
 %doc %{_texmfdistdir}/doc/generic/borceux/compatibility/OldMiniDiagram
 %doc %{_texmfdistdir}/doc/generic/borceux/compatibility/OldMultipleArrows
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -72,5 +61,3 @@ south-east, etc.); 12 types and 32 directions are available.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
