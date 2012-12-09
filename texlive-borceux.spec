@@ -61,3 +61,18 @@ south-east, etc.); 12 types and 32 directions are available.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 3.1-2
++ Revision: 749843
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 3.1-1
++ Revision: 717974
+- texlive-borceux
+- texlive-borceux
+- texlive-borceux
+- texlive-borceux
+- texlive-borceux
+
