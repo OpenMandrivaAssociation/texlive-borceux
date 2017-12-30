@@ -5,8 +5,8 @@
 # catalog-license noinfo
 # catalog-version 3.1
 Name:		texlive-borceux
-Version:	3.1
-Release:	10
+Version:	20110112
+Release:	1
 Summary:	Diagram macros by Francois Borceux
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/diagrams/borceux
