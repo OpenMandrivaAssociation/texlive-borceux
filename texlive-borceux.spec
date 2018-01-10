@@ -5,7 +5,7 @@
 # catalog-license noinfo
 # catalog-version 3.1
 Name:		texlive-borceux
-Version:	20110112
+Version:	20170414
 Release:	1
 Summary:	Diagram macros by Francois Borceux
 Group:		Publishing
