@@ -1,18 +1,12 @@
-# revision 21047
-# category Package
-# catalog-ctan /macros/generic/diagrams/borceux
-# catalog-date 2009-01-02 20:30:08 +0100
-# catalog-license noinfo
-# catalog-version 3.1
 Name:		texlive-borceux
-Version:	20190228
+Version:	21047
 Release:	1
 Summary:	Diagram macros by Francois Borceux
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/diagrams/borceux
 License:	NOINFO
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/borceux.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/borceux.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/borceux.r21047.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/borceux.doc.r21047.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -29,12 +23,12 @@ pair of adjoint arrows, etc.) and their direction (north,
 south-east, etc.); 12 types and 32 directions are available.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -54,25 +48,10 @@ south-east, etc.); 12 types and 32 directions are available.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 3.1-2
-+ Revision: 749843
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 3.1-1
-+ Revision: 717974
-- texlive-borceux
-- texlive-borceux
-- texlive-borceux
-- texlive-borceux
-- texlive-borceux
-
