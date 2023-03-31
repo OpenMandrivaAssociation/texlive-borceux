@@ -1,6 +1,6 @@
 Name:		texlive-borceux
 Version:	21047
-Release:	1
+Release:	2
 Summary:	Diagram macros by Francois Borceux
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/diagrams/borceux
