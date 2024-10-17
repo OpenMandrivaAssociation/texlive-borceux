@@ -3,7 +3,7 @@ Version:	21047
 Release:	2
 Summary:	Diagram macros by Francois Borceux
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/generic/diagrams/borceux
+URL:		https://www.ctan.org/tex-archive/macros/generic/diagrams/borceux
 License:	NOINFO
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/borceux.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/borceux.doc.r%{version}.tar.xz
